@@ -11,7 +11,7 @@
   ];
 
   window.location.href =
-    helpfulSites[Math.floor(Math.random() * helpfulSites.length)];
+    helpfulSites[window.crypto.getRandomValues(new Uint32Array(1))[0] % helpfulSites.length];
 </script>
 <head>
 
