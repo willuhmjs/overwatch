@@ -1,2 +1,2 @@
 # overwatch
-A website for Overwatch players
+A funny website for Overwatch players.
