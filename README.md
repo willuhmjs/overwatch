@@ -1,2 +1,3 @@
 # overwatch
-A funny website for Overwatch players.
+
+A website for Overwatch players. Feel free to fork and adapt to other games.
