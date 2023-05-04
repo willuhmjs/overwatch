@@ -10,3 +10,4 @@ A website for Overwatch players. This website redirects to random resources that
 - Shower recommendations
 - Book recommendations
 - Religious resources
+- Volunteer opportunities
