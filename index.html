@@ -32,11 +32,9 @@
     }
   }
 
-  const href = Math.round(Math.random()) ? nicheSites[Math.floor(Math.random() * helpfulSites.length)] : randomQueryGenerator();
+  const href = Math.round(Math.random()) ? nicheSites[Math.floor(Math.random() * nicheSites.length)] : randomQueryGenerator();
   window.location.href =
     href
-    // Alternative Option
-    // helpfulSites[window.crypto.getRandomValues(new Uint32Array(1))[0] % helpfulSites.length];
 </script>
 <head>
 
