@@ -1,19 +1,12 @@
 <script>
-  const helpfulSites = [
-    "https://www.google.com/search?q=how+to+touch+grass",
-    "https://www.google.com/search?q=how+to+talk+to+girls",
+  const buySites = ["https://amazon.com/s?k=", "https://www.walmart.com/search?q=", "https://www.target.com/s?searchTerm="];
+  const tutorialSites = ["https://www.google.com/search?q=", "https://www.youtube.com/results?search_query=", "https://www.wikihow.com/wikiHowTo?search="];
+  const buyQueries = ["shower", "deodorant", "bible", "treadmill"];
+  const tutorialQueries = ["how to touch grass", "how to talk to girls", "how to get a job", "how to get a girlfriend"]
+  
+  const nicheSites = [
     "https://www.google.com/maps/search/volunteer+opportunities+near+me/",
     "https://www.google.com/search?q=churches+near+me",
-    "https://www.google.com/search?q=how+to+get+a+job",
-    "https://www.wikihow.com/wikiHowTo?search=to+talk+to+girls",
-    "https://www.wikihow.com/wikiHowTo?search=to+touch+grass",
-    "https://www.wikihow.com/wikiHowTo?search=to+get+a+girlfriend",
-    "https://www.wikihow.com/wikiHowTo?search=to+get+a+job",
-    "https://www.walmart.com/search?q=deodorant",
-    "https://www.walmart.com/search?q=shower",
-    "https://www.amazon.com/s?k=deodorant",
-    "https://www.amazon.com/s?k=shower",
-    "https://www.amazon.com/s?k=bible",
     "https://www.barnesandnoble.com/b/bibles/_/N-2sdw",
     "https://www.goldsgym.com/",
     "https://bible.com",
@@ -28,8 +21,20 @@
     "https://www.eftours.com/"
   ];
 
+  function randomQueryGenerator(sites, queries) {
+    if (Math.round(Math.random())) {
+      // if 1, buy site
+      return buySites[Math.floor(Math.random() * buySites.length)] + buyQueries[Math.floor(Math.random() * buyQueries.length)]
+    } else {
+      // if 0, tutorial site
+      return tutorialSites[Math.floor(Math.random() * buySites.length)] + tutorialQueries[Math.floor(Math.random() * buyQueries.length)]
+
+    }
+  }
+
+  const href = Math.round(Math.random()) ? nicheSites[Math.floor(Math.random() * helpfulSites.length)] : randomQueryGenerator;
   window.location.href =
-    helpfulSites[Math.floor(Math.random() * helpfulSites.length)]
+    href
     // Alternative Option
     // helpfulSites[window.crypto.getRandomValues(new Uint32Array(1))[0] % helpfulSites.length];
 </script>
